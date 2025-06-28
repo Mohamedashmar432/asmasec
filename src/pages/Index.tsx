@@ -18,9 +18,18 @@ const Index = () => {
         <Navigation />
         
         <SidebarInset className="flex-1">
-          {/* Sidebar trigger button - always visible */}
-          <header className="h-12 flex items-center border-b border-slate-800 bg-slate-950/80 backdrop-blur-sm sticky top-0 z-40">
-            <SidebarTrigger className="ml-4 text-white hover:bg-slate-800" />
+          {/* Enhanced header with better styling */}
+          <header className="h-14 flex items-center justify-between border-b border-slate-800 bg-slate-950/90 backdrop-blur-sm sticky top-0 z-40 px-4">
+            <div className="flex items-center space-x-4">
+              <SidebarTrigger className="text-white hover:bg-slate-800 transition-colors" />
+              <div className="hidden sm:block">
+                <span className="text-lg font-semibold text-white">Cybersecurity Dashboard</span>
+              </div>
+            </div>
+            <div className="hidden md:flex items-center space-x-2 text-xs text-slate-400">
+              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+              <span>All Systems Operational</span>
+            </div>
           </header>
           
           <main className="flex-1">

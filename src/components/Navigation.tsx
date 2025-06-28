@@ -34,25 +34,28 @@ const Navigation = () => {
 
   return (
     <Sidebar className="bg-slate-900/95 backdrop-blur-sm border-r border-slate-800">
-      <SidebarHeader className="p-6">
-        <div className="flex items-center space-x-2">
-          <Shield className="h-8 w-8 text-blue-500" />
+      <SidebarHeader className="p-4 border-b border-slate-800">
+        <div className="flex items-center space-x-3">
+          <Shield className="h-8 w-8 text-blue-500 flex-shrink-0" />
           {state === 'expanded' && (
-            <span className="text-2xl font-bold text-white">ASMASEC</span>
+            <div className="flex flex-col">
+              <span className="text-xl font-bold text-white tracking-wide">ASMASEC</span>
+              <span className="text-xs text-slate-400">AI Cyber Defense</span>
+            </div>
           )}
         </div>
       </SidebarHeader>
       
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel className="text-slate-400">Navigation</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-slate-400 px-2 py-2">Navigation</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {navItems.map((item) => (
                 <SidebarMenuItem key={item.label}>
                   <SidebarMenuButton
                     onClick={() => handleNavClick(item.href)}
-                    className="text-slate-300 hover:text-white hover:bg-slate-800 transition-all duration-200"
+                    className="text-slate-300 hover:text-white hover:bg-slate-800 transition-all duration-200 px-3 py-2"
                   >
                     <item.icon className="h-5 w-5" />
                     <span>{item.label}</span>

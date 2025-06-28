@@ -5,24 +5,24 @@ import { Shield, Brain, CheckCircle, Users, Zap } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <div id="home" className="min-h-screen bg-slate-950 md:ml-64">
+    <div id="home" className="min-h-screen bg-slate-950">
       {/* Hero Section */}
-      <div className="container mx-auto px-6 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-6 py-12">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Left Content */}
-          <div className="space-y-8">
-            <div className="space-y-6">
+          <div className="space-y-6">
+            <div className="space-y-4">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20">
                 <span className="text-blue-400 text-sm font-medium">Next-Generation Cybersecurity</span>
               </div>
               
-              <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
+              <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
                 <span className="text-white">AI-Powered Cyber</span>
                 <br />
                 <span className="text-blue-400">Defense for the AI Era</span>
               </h1>
               
-              <p className="text-xl text-slate-300 leading-relaxed max-w-2xl">
+              <p className="text-lg text-slate-300 leading-relaxed">
                 Stop AI attacks before they strike — no signup, no credit card, one service free. 
                 Protect your business with enterprise-grade security powered by advanced artificial intelligence.
               </p>
@@ -48,18 +48,18 @@ const Hero = () => {
             </div>
 
             {/* Trust Indicators */}
-            <div className="flex items-center space-x-8 pt-8">
+            <div className="flex items-center space-x-6 pt-4">
               <div className="flex items-center space-x-2">
                 <CheckCircle className="h-5 w-5 text-green-500" />
-                <span className="text-slate-300">99.9% Uptime</span>
+                <span className="text-slate-300 text-sm">99.9% Uptime</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Users className="h-5 w-5 text-blue-500" />
-                <span className="text-slate-300">500+ Companies</span>
+                <span className="text-slate-300 text-sm">500+ Companies</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Zap className="h-5 w-5 text-yellow-500" />
-                <span className="text-slate-300">Real-time Protection</span>
+                <span className="text-slate-300 text-sm">Real-time Protection</span>
               </div>
             </div>
           </div>
@@ -133,8 +133,8 @@ const Hero = () => {
 
       {/* Features Section */}
       <div className="border-t border-slate-800 bg-slate-900/50">
-        <div className="container mx-auto px-6 py-16">
-          <div className="text-center mb-12">
+        <div className="container mx-auto px-6 py-12">
+          <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-white mb-4">Trusted by Industry Leaders</h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
               Join hundreds of companies that trust ASMASEC to protect their digital assets
