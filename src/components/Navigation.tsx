@@ -1,10 +1,21 @@
 
-import React, { useState } from 'react';
-import { Shield, Home, BarChart3, Wrench, Calendar, Mail, Menu, X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import React from 'react';
+import { Shield, Home, BarChart3, Wrench, Calendar, Mail } from 'lucide-react';
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarGroup,
+  SidebarGroupContent,
+  SidebarGroupLabel,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+  SidebarHeader,
+  useSidebar,
+} from '@/components/ui/sidebar';
 
 const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const { state } = useSidebar();
 
   const navItems = [
     { icon: Home, label: 'Home', href: '#home' },
@@ -14,51 +25,45 @@ const Navigation = () => {
     { icon: Mail, label: 'Contact', href: '#contact' },
   ];
 
+  const handleNavClick = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <>
-      {/* Mobile Menu Button */}
-      <Button
-        variant="ghost"
-        size="icon"
-        className="fixed top-4 left-4 z-50 md:hidden bg-slate-900/80 backdrop-blur-sm border border-slate-600"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-      </Button>
-
-      {/* Sidebar Navigation */}
-      <nav className={`fixed left-0 top-0 h-full w-64 bg-slate-900/95 backdrop-blur-sm border-r border-slate-800 z-40 transform transition-transform duration-300 ${isOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}`}>
-        <div className="p-6">
-          <div className="flex items-center space-x-2 mb-8">
-            <Shield className="h-8 w-8 text-blue-500" />
+    <Sidebar className="bg-slate-900/95 backdrop-blur-sm border-r border-slate-800">
+      <SidebarHeader className="p-6">
+        <div className="flex items-center space-x-2">
+          <Shield className="h-8 w-8 text-blue-500" />
+          {state === 'expanded' && (
             <span className="text-2xl font-bold text-white">ASMASEC</span>
-          </div>
-          
-          <ul className="space-y-4">
-            {navItems.map((item) => (
-              <li key={item.label}>
-                <a
-                  href={item.href}
-                  className="flex items-center space-x-3 px-4 py-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-all duration-200"
-                  onClick={() => setIsOpen(false)}
-                >
-                  <item.icon className="h-5 w-5" />
-                  <span>{item.label}</span>
-                </a>
-              </li>
-            ))}
-          </ul>
+          )}
         </div>
-      </nav>
-
-      {/* Overlay for mobile */}
-      {isOpen && (
-        <div 
-          className="fixed inset-0 bg-black/50 z-30 md:hidden"
-          onClick={() => setIsOpen(false)}
-        />
-      )}
-    </>
+      </SidebarHeader>
+      
+      <SidebarContent>
+        <SidebarGroup>
+          <SidebarGroupLabel className="text-slate-400">Navigation</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {navItems.map((item) => (
+                <SidebarMenuItem key={item.label}>
+                  <SidebarMenuButton
+                    onClick={() => handleNavClick(item.href)}
+                    className="text-slate-300 hover:text-white hover:bg-slate-800 transition-all duration-200"
+                  >
+                    <item.icon className="h-5 w-5" />
+                    <span>{item.label}</span>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+      </SidebarContent>
+    </Sidebar>
   );
 };
 
