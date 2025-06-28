@@ -5,25 +5,7 @@ import { Shield, Brain, CheckCircle, Users, Zap } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <div className="min-h-screen bg-slate-950">
-      {/* Navigation Bar */}
-      <nav className="border-b border-slate-800 bg-slate-950/95 backdrop-blur-sm">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <Shield className="h-8 w-8 text-blue-500" />
-              <span className="text-2xl font-bold text-white">ASMASEC</span>
-            </div>
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#" className="text-slate-300 hover:text-white transition-colors">Solutions</a>
-              <a href="#" className="text-slate-300 hover:text-white transition-colors">Products</a>
-              <a href="#" className="text-slate-300 hover:text-white transition-colors">Resources</a>
-              <a href="#" className="text-slate-300 hover:text-white transition-colors">Contact</a>
-            </div>
-          </div>
-        </div>
-      </nav>
-
+    <div id="home" className="min-h-screen bg-slate-950 md:ml-64">
       {/* Hero Section */}
       <div className="container mx-auto px-6 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
