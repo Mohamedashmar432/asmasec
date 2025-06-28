@@ -3,48 +3,39 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Cybersecurity theme with dark colors and neon glows */
+/* Professional cybersecurity theme */
 
 @layer base {
   :root {
-    --background: 210 100% 2%;
-    --foreground: 200 50% 95%;
+    --background: 210 100% 4%;
+    --foreground: 210 40% 98%;
 
-    --card: 215 50% 8%;
-    --card-foreground: 200 50% 95%;
+    --card: 215 28% 17%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 215 50% 8%;
-    --popover-foreground: 200 50% 95%;
+    --popover: 215 28% 17%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 195 100% 50%;
-    --primary-foreground: 210 100% 2%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 180 100% 40%;
-    --secondary-foreground: 210 100% 2%;
+    --secondary: 215 28% 17%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 215 50% 12%;
-    --muted-foreground: 200 20% 60%;
+    --muted: 215 28% 17%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 195 100% 50%;
-    --accent-foreground: 210 100% 2%;
+    --accent: 215 28% 17%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 215 30% 18%;
-    --input: 215 30% 18%;
-    --ring: 195 100% 50%;
+    --border: 215 28% 18%;
+    --input: 215 28% 18%;
+    --ring: 217 91% 60%;
 
     --radius: 0.5rem;
-
-    --sidebar-background: 210 100% 2%;
-    --sidebar-foreground: 200 50% 95%;
-    --sidebar-primary: 195 100% 50%;
-    --sidebar-primary-foreground: 210 100% 2%;
-    --sidebar-accent: 215 50% 8%;
-    --sidebar-accent-foreground: 200 50% 95%;
-    --sidebar-border: 215 30% 18%;
-    --sidebar-ring: 195 100% 50%;
   }
 }
 
@@ -55,46 +46,12 @@
 
   body {
     @apply bg-background text-foreground;
-    background: linear-gradient(135deg, #020817 0%, #0f172a 50%, #1e293b 100%);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   }
 }
 
 @layer utilities {
-  .glow-blue {
-    box-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
-  }
-  
-  .glow-teal {
-    box-shadow: 0 0 20px rgba(20, 184, 166, 0.3);
-  }
-  
-  .text-glow {
-    text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
-  }
-  
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-  
-  .animate-pulse-glow {
-    animation: pulse-glow 2s ease-in-out infinite alternate;
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-@keyframes pulse-glow {
-  from {
-    box-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
-  }
-  to {
-    box-shadow: 0 0 40px rgba(0, 191, 255, 0.6);
+  .text-balance {
+    text-wrap: balance;
   }
 }
