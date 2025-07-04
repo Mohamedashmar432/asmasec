@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -17,7 +16,8 @@ const Services = () => {
           icon: Github,
           description: "Automatically scan and secure your repositories",
           status: "active",
-          action: "Use Now"
+          action: "Use Now",
+          link: "https://github.com/apps/asmasec-repo-hardener" // Example GitHub App link
         },
         {
           name: "API Key Exposure",
@@ -95,6 +95,12 @@ const Services = () => {
     }
   ];
 
+  const handleServiceClick = (service: any) => {
+    if (service.status === 'active' && service.link) {
+      window.open(service.link, '_blank');
+    }
+  };
+
   return (
     <section id="services" className="py-20 bg-slate-950 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-slate-900/50 to-slate-950"></div>
@@ -148,6 +154,7 @@ const Services = () => {
                           variant={service.status === 'active' ? 'default' : 'outline'}
                           disabled={service.status === 'coming-soon'}
                           className="w-full"
+                          onClick={() => handleServiceClick(service)}
                         >
                           {service.action}
                         </Button>
