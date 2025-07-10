@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Shield, Users, Building, Github, Key, FileText, Eye, BarChart3, Zap, Lock, Brain, Monitor } from 'lucide-react';
+import { link } from 'fs';
 
 const Services = () => {
   const serviceCategories = [
@@ -23,8 +24,10 @@ const Services = () => {
           name: "API Key Exposure",
           icon: Key,
           description: "Monitor for exposed API keys in your codebase",
-          status: "Testing",
-          action: "Coming Soon"
+          status: "active",
+          action: "use now",
+          link: "https://tally.so/r/w70M89"
+
         },
         {
           name: "Security Policy Generator",
@@ -46,13 +49,13 @@ const Services = () => {
           icon: Eye,
           description: "Monitor for leaked credentials across the web",
           status: "active",
-          action: "active",
+          action: "use now",
           link: "https://tally.so/r/3l1W8W" 
         },
         {
-          name: "Ticket Analyzer",
+          name: "SSL Monitor",
           icon: BarChart3,
-          description: "AI-powered analysis of security tickets",
+          description: "Monitor SSL certificates and renewals",
           status: "coming-soon",
           action: "Coming Soon"
         },
@@ -66,22 +69,22 @@ const Services = () => {
       ]
     },
     {
-      title: "For Small Enterprises & Individuals",
+      title: "For Security researchers & Individuals",
       icon: Building,
       description: "Enterprise-grade security made accessible",
       gradient: "from-green-500/20 to-teal-500/20",
       services: [
         {
-          name: "SSL Monitor",
+          name: "Vulnerability Exploit Tracker Agent",
           icon: Lock,
           description: "Monitor SSL certificates and renewals",
           status: "coming-soon",
           action: "Coming Soon"
         },
         {
-          name: "Security Tips Bot",
+          name: "Bug Bountry reconnaisance agent",
           icon: Brain,
-          description: "AI assistant for security best practices",
+          description: "automatic target information gathering",
           status: "coming-soon",
           action: "Coming Soon"
         },
