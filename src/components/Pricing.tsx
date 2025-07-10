@@ -25,7 +25,7 @@ const Pricing = () => {
     },
     {
       name: "Solo Pack",
-      price: "$29",
+      price: "Free for limited time",
       period: "per month",
       description: "Ideal for individual developers and small startups",
       icon: Star,
@@ -76,10 +76,11 @@ const Pricing = () => {
             <span className="text-blue-400 text-sm font-medium">Pricing</span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            Choose Your <span className="text-blue-400">Defense Level</span>
+          Choose Your <span className="text-blue-400">Defense Plan</span>
           </h2>
           <p className="text-xl text-slate-400 max-w-3xl mx-auto">
-            From free protection to enterprise-grade security, we have a plan that fits your needs
+          Whether you're just testing the waters or need full coverage, Asmasec scales with your security needs.
+
           </p>
         </div>
 

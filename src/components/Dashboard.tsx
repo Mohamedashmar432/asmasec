@@ -9,7 +9,7 @@ const Dashboard = () => {
       service: "GitHub Repo Hardener",
       time: "2 minutes ago",
       severity: "high",
-      recommendation: "Critical vulnerability detected in dependencies. Update lodash to version 4.17.21 immediately.",
+      recommendation: "Outdated dependency found: lodash@4.17.15. Recommend upgrading to 4.17.21.",
       icon: AlertTriangle,
       color: "text-red-400"
     },
@@ -17,7 +17,7 @@ const Dashboard = () => {
       service: "SSL Monitor",
       time: "15 minutes ago",
       severity: "medium",
-      recommendation: "SSL certificate expires in 7 days. Schedule renewal to avoid service interruption.",
+      recommendation: "Certificate for example.com expires in 7 days. Renewal suggested.",
       icon: Clock,
       color: "text-yellow-400"
     },
@@ -25,7 +25,7 @@ const Dashboard = () => {
       service: "API Key Exposure",
       time: "1 hour ago",
       severity: "low",
-      recommendation: "No exposed API keys detected in recent commits. Your repositories are secure.",
+      recommendation: "No keys found in recent commits. Repositories appear secure.",
       icon: CheckCircle,
       color: "text-green-400"
     },
@@ -33,7 +33,7 @@ const Dashboard = () => {
       service: "Threat Aggregator",
       time: "3 hours ago",
       severity: "medium",
-      recommendation: "New phishing campaign targeting your industry detected. Review security awareness training.",
+      recommendation: "Suspicious phishing indicators in open threat feeds relevant to your tech stack.",
       icon: Shield,
       color: "text-blue-400"
     }
@@ -58,10 +58,10 @@ const Dashboard = () => {
             <span className="text-blue-400 text-sm font-medium">User Dashboard</span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            Real-Time Security <span className="text-blue-400">Alerts</span>
+          Real-Time Insights from Your Active  <span className="text-blue-400">Security Agents</span>
           </h2>
           <p className="text-xl text-slate-400 max-w-3xl mx-auto">
-            Stay informed with intelligent alerts and actionable recommendations
+          Get smart alerts and guided recommendations from your currently enabled AI agents.
           </p>
         </div>
 

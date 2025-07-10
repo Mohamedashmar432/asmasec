@@ -15,15 +15,15 @@ const Services = () => {
           name: "GitHub Repo Hardener",
           icon: Github,
           description: "Automatically scan and secure your repositories",
-          status: "active",
-          action: "Use Now",
-          link: "https://github.com/apps/asmasec-repo-hardener" // Example GitHub App link
+          status: "testing",
+          action: "coming soon"
+          
         },
         {
           name: "API Key Exposure",
           icon: Key,
           description: "Monitor for exposed API keys in your codebase",
-          status: "coming-soon",
+          status: "Testing",
           action: "Coming Soon"
         },
         {
@@ -45,8 +45,9 @@ const Services = () => {
           name: "Credential Leak Watcher",
           icon: Eye,
           description: "Monitor for leaked credentials across the web",
-          status: "coming-soon",
-          action: "Coming Soon"
+          status: "active",
+          action: "active",
+          link: "https://tally.so/r/3l1W8W" 
         },
         {
           name: "Ticket Analyzer",
@@ -97,7 +98,7 @@ const Services = () => {
 
   const handleServiceClick = (service: any) => {
     if (service.status === 'active' && service.link) {
-      window.open(service.link, '_blank');
+      window.open(service.link, '_self','noopener,noreferrer');
     }
   };
 

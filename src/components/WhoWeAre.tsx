@@ -24,8 +24,7 @@ const WhoWeAre = () => {
             </h2>
             
             <p className="text-xl text-slate-300 leading-relaxed">
-              Asmasec empowers small businesses, founders, and developers to fight back with 
-              AI-powered defense agents. Built for the new age of automated cyber threats.
+            At Asmasec, we empower solo founders, developers, and small teams with intelligent security agents. As AI enables faster, more sophisticated attacks, we deliver simplified, automated defense tools—so you stay secure without the complexity.
             </p>
             
             <p className="text-lg text-slate-400 leading-relaxed">
@@ -61,7 +60,7 @@ const WhoWeAre = () => {
             <div className="bg-slate-800 rounded-2xl p-8 border border-slate-700">
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="bg-slate-900 rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold text-blue-400 mb-1">500+</div>
+                  <div className="text-2xl font-bold text-blue-400 mb-1">1+</div>
                   <div className="text-xs text-slate-400">Protected Businesses</div>
                 </div>
                 <div className="bg-slate-900 rounded-lg p-4 text-center">
