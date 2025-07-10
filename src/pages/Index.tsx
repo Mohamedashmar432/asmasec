@@ -23,7 +23,7 @@ const Index = () => {
             <div className="flex items-center space-x-4">
               <SidebarTrigger className="text-white hover:bg-slate-800 transition-colors" />
               <div className="hidden sm:block">
-                <span className="text-lg font-semibold text-white">Cybersecurity Dashboard</span>
+                <span className="text-lg font-semibold text-white">Asma Sec</span>
               </div>
             </div>
             <div className="hidden md:flex items-center space-x-2 text-xs text-slate-400">
