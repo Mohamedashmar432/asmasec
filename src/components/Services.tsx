@@ -71,13 +71,13 @@ const Services = () => {
     {
       title: "For Security researchers & Individuals",
       icon: Building,
-      description: "Enterprise-grade security made accessible",
+      description: "time save agents for security researchers",
       gradient: "from-green-500/20 to-teal-500/20",
       services: [
         {
           name: "Vulnerability Exploit Tracker Agent",
           icon: Lock,
-          description: "Monitor SSL certificates and renewals",
+          description: "Monitors sites like ExploitDB, CVE, HackerOne, Bugcrowd for new bugs",
           status: "coming-soon",
           action: "Coming Soon"
         },
